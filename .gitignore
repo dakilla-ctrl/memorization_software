@@ -1,0 +1,32 @@
+# Ignore the virtual environment
+venv/
+
+# Ignore IDE configuration files
+.idea/
+.idea/shelf/
+.idea/workspace.xml
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore log files
+*.log
+
+# Ignore environment variable files
+.env
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore other common files
+*.DS_Store        # macOS
+Thumbs.db         # Windows
+
+# Ignore compiled files
+*.pyo
+*.pyd
+
+# Ignore coverage reports
+.coverage
+htmlcov/

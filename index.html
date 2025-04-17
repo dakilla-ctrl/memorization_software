@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Interface</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #accuracy-bar {
+            width: 0%;
+            height: 20px;
+            background-color: green;
+        }
+        #notification {
+            display: none;
+            background-color: yellow;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        #userInput {
+            transition: width 0.3s; /* Smooth transition */
+            width: 200px; /* Initial width */
+        }
+        #history-container, #error-analytics-container {
+            margin-top: 20px;
+            display: none; /* Initially hidden */
+        }
+        #progress {
+            margin-bottom: 20px; /* Space below progress */
+            font-weight: bold; /* Make it stand out */
+        }
+    </style>
+</head>
+<body>
+    <div id="progress">
+        Words Completed: <span id="word-count">0</span>/<span id="total-words">0</span> | Time: <span id="timer">00:00</span>
+    </div>
+
+    <h1>Select a Material</h1>
+    <label for="userInput">Your Input:</label>
+    <input type="text" id="userInput" placeholder="Type your thoughts here..." oninput="checkInput(); adjustInputWidth();">
+    <button id="addPrayerButton" onclick="addPrayer()">Add Material</button>
+
+    <label for="prayerSelect">Select a Material:</label>
+    <select id="prayerSelect" onchange="updateUserInput()">
+        <option value="">Select a material</option>
+        <option value="prayer1">Material 1: "Lord, grant me strength."</option>
+        <option value="prayer2">Material 2: "Peace be with you."</option>
+    </select>
+
+    <h2>Select Difficulty</h2>
+    <select id="difficultySelect" onchange="storeDifficulty()">
+        <option value="">Select difficulty</option>
+        <option value="word">Word</option>
+        <option value="line">Line</option>
+        <option value="section">Section</option>
+    </select>
+
+    <button id="proceedButton" disabled onclick="startTyping()">Proceed</button>
+
+    <div id="typingInterface" style="display:none;">
+        <h2>Typing Challenge</h2>
+        <p id="textToType"></p>
+        <div id="blanksContainer"></div> <!-- Container for blanks -->
+        <button onclick="submitTyping()">Submit</button>
+        <button onclick="restartSession()">Restart</button> <!-- Restart button -->
+        <div id="feedback" style="display:none;"></div>
+    </div>
+
+    <div id="accuracy-container" style="display:none;">
+        <div id="accuracy-bar"></div>
+        <p id="accuracy-text"></p>
+    </div>
+
+    <div id="notification" style="display:none;">Input added successfully!</div>
+
+    <!-- Performance History Section -->
+    <div id="history-container">
+        <h2>Performance History</h2>
+        <p>Average Accuracy: <span id="average-accuracy">0%</span></p>
+        <p>Most Missed Words: <span id="most-missed-words">None</span></p>
+        <p>Recent Scores: <span id="recent-scores">None</span></p>
+    </div>
+
+    <!-- Error Analytics Section -->
+    <button id="toggle-error-analytics" onclick="toggleErrorAnalytics()">Show Error Analytics</button>
+    <div id="error-analytics-container">
+        <h2>Error Analytics</h2>
+        <p>Common Mistakes:</p>
+        <ul id="common-mistakes-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

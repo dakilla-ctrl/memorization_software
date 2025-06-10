@@ -34,16 +34,12 @@ python memoware.py
 - Double-click to run
 
 ## Tech Stack
-. Python 3
-. Tkinter (GUI)
-. Basic OOP
+- Python 3
+- Tkinter (GUI)
+- Basic OOP
 
 ## File Structure
-python_version/
-│
-├── main.py          # Core application logic
-├── README.md        # This file
-└── assets/          # Images, icons, future assets
+<pre> ```text python_version/ │ ├── memoware.py          # Core application logic ├── README.md        # This file └── assets/          # Images, icons, future assets <pre> ```text 
 
 ## Future Plans
 . Mobile version

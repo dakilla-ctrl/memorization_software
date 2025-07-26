@@ -1,6 +1,7 @@
 #  Memorization Software - Memoware (Python GUI Version)
 A text memorization tool built in Python using Tkinter. Users type out material segments to reinforce memory, with increasing difficulty levels and scoring
-![demo](https://github.com/your-username/your-repo-name/raw/main/demo.gif)
+
+<img src="https://github.com/dakilla-ctrl/memorization_software/raw/python-version/assets/demo.gif" width="350" />
 
 
 ---
@@ -19,7 +20,22 @@ A text memorization tool built in Python using Tkinter. Users type out material 
 
 ## Screenshots
 
-<!-- paste screenshots here later -->
+### Start Screen
+
+<img src="./assets/Screenshot%20%28298%29.png" width="300" />
+
+### Select Difficulty
+
+<img src="./assets/Screenshot%20%28299%29.png" width="300" />
+
+### Start Exercise
+
+<img src="./assets/Screenshot%20%28300%29.png" width="300" />
+
+### Final Score
+
+<img src="./assets/Screenshot%20%28301%29.png" width="300" />
+
 
 
 ---
@@ -39,18 +55,23 @@ python memoware.py
 - Basic OOP
 
 ## File Structure
-<pre> ```text python_version/ │ ├── memoware.py          # Core application logic ├── README.md        # This file └── assets/          # Images, icons, future assets <pre> ```text 
+```text
+python_version/
+├── memoware.py   # Core application logic
+├── README.md     # This file
+└── assets/       # Images, icons, future assets
+```
+
+
+---
 
 ## Future Plans
-. Mobile version
-. Add Sound
-. Whatever is asked for
+- Mobile version
+- Add Sound
+- Whatever is asked for
 
 # Why I Built This
 I wanted a personal, focused tool for text memorization
 
 ## Learn More
-You can read the development journey or ideas behind this tool on the [link-project page]
-
-## Journey and Ideas
-Learn more about the development [here](./dev_notes.md)
+You can read the development journey or ideas behind this tool on the [Project Journey](./dev_notes.md).
